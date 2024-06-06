@@ -1,12 +1,16 @@
-import React from 'react';
-import TaskItem from '../TaskItem';
+import TaskItem from '@/app/components/TaskItem';
 
-const TaskList = () => {
-  // Render TaskItems using TaskItem component
-  // Filter tasks by status here
+export default function TaskList({ tasks, onToggleTask, onDeleteTask }) {
   return (
-    <></>
+    <ul>
+      {tasks.map(task => (
+        <TaskItem 
+          key={task.id}
+          task={task}
+          onToggleTask={onToggleTask}
+          onDeleteTask={onDeleteTask}
+        />
+      ))}
+    </ul>
   );
-};
-
-export default TaskList;
+}

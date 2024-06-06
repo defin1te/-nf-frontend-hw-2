@@ -63,14 +63,14 @@ export default function Home() {
           Add Task
         </button>
       </div>
-      <div className="bg-white rounded p-4 shadow-lg flex-grow">
+      <div className="bg-blue rounded p-4 shadow-lg flex-grow">
         <TaskList
           tasks={filteredTasks}
           onToggleTask={handleToggleTask}
           onDeleteTask={handleDeleteTask}
         />
         <div className="mt-4 flex justify-between items-center text-sm text-blue-500">
-          <p>{uncompletedTasksCount} items left</p>
+          <p>{uncompletedTasksCount} tasks left</p>
           <div>
             <button 
               onClick={() => setFilter('all')} 
